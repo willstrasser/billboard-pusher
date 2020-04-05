@@ -16,8 +16,6 @@ const channels = new Channels({
 });
 
 export default (req, res) => {
-  const data = req.query;
-
   const twilioSignature = req.headers['x-twilio-signature'];
   const params = req.query;
   const url = 'https://billboard-pusher.now.sh/api/push-event';
@@ -29,13 +27,18 @@ export default (req, res) => {
     params
   );
 
+  console.log(process.env.TWILIO_ACCOUNT_AUTH);
+  console.log(twilioSignature);
+  console.log(url);
+  console.log(params);
+
   console.log('requestIsValid', requestIsValid);
 
   if (!requestIsValid) {
     return res.status(401).send('Unauthorized');
   }
 
-  channels.trigger('my-channel', 'my-event', data, () => {
-    res.status(200).end(`sent event successfully {data: ${JSON.stringify(data)}`);
+  channels.trigger('my-channel', 'my-event', params, () => {
+    res.status(200).end(`sent event successfully {data: ${JSON.stringify(params)}`);
   });
 };
