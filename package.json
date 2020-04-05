@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "pusher": "^3.0.1"
+  },
+  "scripts": {
+    "build": "npm i && rm -rf public && mkdir public && echo 'Custom Build' > ./public/index.html"
   }
 }
