@@ -7,7 +7,7 @@ const {
   PUSHER_CLUSTER: cluster,
 } = process.env;
 
-const pusher = new Channels({
+const channels = new Channels({
   appId,
   key,
   secret,
