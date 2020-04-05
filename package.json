@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "pusher": "^3.0.1"
+    "pusher": "^3.0.1",
+    "twilio": "^3.42.0"
   },
   "scripts": {
     "build": "npm i && rm -rf public && mkdir public && echo 'Custom Build' > ./public/index.html"
