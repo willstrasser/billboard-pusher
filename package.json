@@ -4,6 +4,6 @@
     "twilio": "^3.42.0"
   },
   "scripts": {
-    "build": "npm i && rm -rf public && mkdir public && echo 'Custom Build' > ./public/index.html"
+    "build": "rm -rf public && mkdir public && echo 'Custom Build' > ./public/index.html"
   }
 }
