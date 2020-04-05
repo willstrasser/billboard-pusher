@@ -1,4 +1,4 @@
-const Channels = require('pusher');
+import Channels from 'pusher';
 
 const {
   PUSHER_APP_ID: appId,
@@ -7,7 +7,7 @@ const {
   PUSHER_CLUSTER: cluster,
 } = process.env;
 
-const pusher = new Pusher({
+const pusher = new Channels({
   appId,
   key,
   secret,
