@@ -16,8 +16,8 @@ const channels = new Channels({
 });
 
 export default (req, res) => {
+  const params = req.query;
   // const twilioSignature = req.headers['x-twilio-signature'];
-  // const params = req.query;
   // const url = 'https://billboard-pusher.now.sh/api/push-event';
 
   // const requestIsValid = twilio.validateRequest(
