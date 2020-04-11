@@ -4,6 +4,7 @@
     "PUSHER_KEY": "@pusher_key",
     "PUSHER_SECRET": "@pusher_secret",
     "PUSHER_CLUSTER": "@pusher_cluster",
-    "TWILIO_ACCOUNT_AUTH": "@twilio_account_auth"
+    "TWILIO_ACCOUNT_AUTH": "@twilio_account_auth",
+    "WEBHOOK_URL": "@webhook_url"
   }
 }
